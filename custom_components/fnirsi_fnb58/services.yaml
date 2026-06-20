@@ -1,0 +1,16 @@
+reload_connection:
+  name: Reload BLE connection
+  description: Stop and start the FNIRSI FNB58 BLE session for a configured device.
+  fields:
+    entry_id:
+      name: Config entry ID
+      description: Target config entry ID. Optional when only one FNIRSI FNB58 entry exists.
+      example: "01J123456789ABCDEFGHJK"
+      selector:
+        text:
+    device_id:
+      name: Device
+      description: Home Assistant device ID for the FNIRSI FNB58 device.
+      selector:
+        device:
+          integration: fnirsi_fnb58

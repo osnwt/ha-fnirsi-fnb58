@@ -1,0 +1,24 @@
+{
+  "domain": "fnirsi_fnb58",
+  "name": "FNIRSI FNB58 USB Tester",
+  "bluetooth": [
+    {
+      "local_name": "FNB58*"
+    },
+    {
+      "local_name": "FNIRSI*"
+    }
+  ],
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": [
+    "bluetooth"
+  ],
+  "integration_type": "device",
+  "iot_class": "local_push",
+  "loggers": [
+    "custom_components.fnirsi_fnb58"
+  ],
+  "requirements": [],
+  "version": "1.0.0"
+}

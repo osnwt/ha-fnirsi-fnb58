@@ -1,0 +1,9 @@
+{
+  "name": "FNIRSI FNB58 USB Tester",
+  "content_in_root": false,
+  "domains": [
+    "fnirsi_fnb58"
+  ],
+  "homeassistant": "2024.6.0",
+  "render_readme": true
+}

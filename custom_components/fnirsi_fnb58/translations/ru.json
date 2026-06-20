@@ -1,0 +1,59 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Выбор FNIRSI FNB58 USB Tester",
+        "description": "Выберите обнаруженный connectable FNIRSI FNB58 USB Tester или введите его BLE-адрес вручную.",
+        "data": {
+          "address": "Обнаруженное устройство",
+          "manual_address": "BLE-адрес вручную"
+        }
+      },
+      "bluetooth_confirm": {
+        "title": "Настройка FNIRSI FNB58 USB Tester",
+        "description": "Добавить {name} ({address}) в Home Assistant?"
+      }
+    },
+    "abort": {
+      "already_configured": "Это устройство уже настроено.",
+      "not_supported": "Обнаруженное Bluetooth-устройство не похоже на FNIRSI FNB58 USB Tester."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "voltage": {
+        "name": "Напряжение"
+      },
+      "current": {
+        "name": "Ток"
+      },
+      "power": {
+        "name": "Мощность"
+      },
+      "dp": {
+        "name": "D+"
+      },
+      "dn": {
+        "name": "D-"
+      },
+      "temperature": {
+        "name": "Температура"
+      },
+      "energy_wh": {
+        "name": "Энергия"
+      },
+      "capacity_ah": {
+        "name": "Емкость"
+      },
+      "record_seconds": {
+        "name": "Время записи"
+      },
+      "power_on_seconds": {
+        "name": "Время работы"
+      },
+      "inferred_protocol": {
+        "name": "Определенный протокол"
+      }
+    }
+  }
+}

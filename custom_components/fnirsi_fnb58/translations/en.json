@@ -1,0 +1,59 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Select FNIRSI FNB58 USB Tester",
+        "description": "Choose a discovered connectable FNIRSI FNB58 USB Tester device, or enter its BLE address manually.",
+        "data": {
+          "address": "Discovered device",
+          "manual_address": "Manual BLE address"
+        }
+      },
+      "bluetooth_confirm": {
+        "title": "Set up FNIRSI FNB58 USB Tester",
+        "description": "Add {name} ({address}) to Home Assistant?"
+      }
+    },
+    "abort": {
+      "already_configured": "This device is already configured.",
+      "not_supported": "The discovered Bluetooth device does not look like an FNIRSI FNB58 USB Tester."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "voltage": {
+        "name": "Voltage"
+      },
+      "current": {
+        "name": "Current"
+      },
+      "power": {
+        "name": "Power"
+      },
+      "dp": {
+        "name": "D+"
+      },
+      "dn": {
+        "name": "D-"
+      },
+      "temperature": {
+        "name": "Temperature"
+      },
+      "energy_wh": {
+        "name": "Energy"
+      },
+      "capacity_ah": {
+        "name": "Capacity"
+      },
+      "record_seconds": {
+        "name": "Record Time"
+      },
+      "power_on_seconds": {
+        "name": "Power On Time"
+      },
+      "inferred_protocol": {
+        "name": "Inferred Protocol"
+      }
+    }
+  }
+}
