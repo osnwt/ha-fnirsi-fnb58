@@ -12,7 +12,8 @@ PLATFORMS = ["sensor"]
 SERVICE_RELOAD_CONNECTION = "reload_connection"
 
 
-async def _async_handle_reload_connection(hass, call: ServiceCall) -> None:
+async def _async_handle_reload_connection(call: ServiceCall) -> None:
+    hass = call.hass
     coordinators = hass.data.get(DOMAIN, {})
     coordinator = None
 
