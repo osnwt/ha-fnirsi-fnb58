@@ -53,7 +53,10 @@ class FNB58BleClient:
         if self._task is not None:
             return
         self._stopped = False
-        self._task = self.hass.async_create_task(self._run())
+        self._task = self.hass.async_create_background_task(
+            self._run(),
+            f"fnb58_ble_{self.address}",
+        )
 
     async def stop(self) -> None:
         self._stopped = True
