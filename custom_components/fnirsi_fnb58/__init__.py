@@ -41,8 +41,8 @@ async def _async_handle_reload_connection(call: ServiceCall) -> None:
     await coordinator.async_reload_connection()
 
 
-async def async_setup(hass, config: dict) -> bool:
-    hass.data.setdefault(DOMAIN, {})
+def _async_register_services(hass) -> None:
+    """Register domain services, including after a config-entry reload."""
     if not hass.services.has_service(DOMAIN, SERVICE_RELOAD_CONNECTION):
         hass.services.async_register(
             DOMAIN,
@@ -55,6 +55,11 @@ async def async_setup(hass, config: dict) -> bool:
                 }
             ),
         )
+
+
+async def async_setup(hass, config: dict) -> bool:
+    hass.data.setdefault(DOMAIN, {})
+    _async_register_services(hass)
     return True
 
 
@@ -63,6 +68,7 @@ async def async_setup_entry(hass, entry) -> bool:
 
     coordinator = FNB58Coordinator(hass, entry)
     hass.data.setdefault(DOMAIN, {})
+    _async_register_services(hass)
     hass.data[DOMAIN][entry.entry_id] = coordinator
     await coordinator.async_start()
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
